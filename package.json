@@ -32,7 +32,8 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "eslint -c .eslintrc.js packages/**/*.ts --fix --quiet"
+      "eslint -c .eslintrc.js packages/**/*.ts --fix --quiet",
+      "jest"
     ]
   }
 }
