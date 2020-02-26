@@ -23,4 +23,13 @@ module.exports = {
     'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
   },
   ignorePatterns: ['node_modules/', 'dist/'],
+
+  overrides: [
+    {
+      files: ['**/*.spec.ts', '**/*.spec.tsx'],
+      env: {
+        jest: true,
+      },
+    },
+  ],
 };
