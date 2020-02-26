@@ -4,7 +4,7 @@ services:
 before_install:
   - docker build -t tajpouria/swagger-codegen -f ./Dockerfile .
 script:
-  - docker run tajpouria/swagger-codegen npm run test -- --watchAll=false
+  - docker run tajpouria/swagger-codegen npm run test
   - docker run tajpouria/swagger-codegen npm run lint
 deploy:
   provide: pages
