@@ -23,13 +23,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lerna run build --noEmit && lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "yarn lint",
-      "git add"
+    "*.{ts,tsx}": [
+      "eslint -c .eslintrc.js packages/**/*.ts --fix --quiet"
     ]
   }
 }
