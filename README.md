@@ -4,7 +4,7 @@ After a long time repeating our self implementing object oriented documented RES
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/swagger-codegen/tags)
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/tajpouria/swagger-codegen/tags)
 
 ## Contribute!
 
