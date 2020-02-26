@@ -29,6 +29,6 @@ There we go!
 
 #### How can I make a PR?
 
-We follows known [ git-flow ](https://datasift.github.io/gitflow/IntroducingGitFlow.html) principles and project setting up to running our tests and linter rules on `git commit` level
+We follows known [ git-flow ](https://datasift.github.io/gitflow/IntroducingGitFlow.html) principles and project setting up to running our linter rules on `git commit` level
 
 You can find our tags on [tags on this repository](https://github.com/tajpouria/swagger-codegen/tags) **make sure to create your pull request on you target tag version dev branch** for example if you want make some change on version `v0.0.1` you should make your pull request on `v0.0.1-dev` branch
