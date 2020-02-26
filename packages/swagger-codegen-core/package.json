@@ -1,0 +1,21 @@
+{
+  "name": "@swagger-codegen/core",
+  "version": "0.0.1",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn run clean && yarn run compile",
+    "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo",
+    "compile": "tsc -b tsconfig.json"
+  },
+  "dependencies": {
+    "@swagger-codegen/core": "0.0.1",
+    "@swagger-codegen/utils": "0.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.2"
+  }
+}
