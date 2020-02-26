@@ -20,6 +20,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-underscore-dangle': 'off',
+    'import/extensions': 'off',
     'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
   },
   ignorePatterns: ['node_modules/', 'dist/'],

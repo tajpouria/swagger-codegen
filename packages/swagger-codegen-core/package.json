@@ -10,13 +10,17 @@
   "scripts": {
     "build": "yarn run clean && yarn run compile",
     "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo",
-    "compile": "tsc -b tsconfig.json"
+    "compile": "tsc -b tsconfig.json",
+    "test": "jest"
   },
   "dependencies": {
-    "@swagger-codegen/core": "0.0.1",
     "@swagger-codegen/utils": "0.0.1"
   },
   "devDependencies": {
     "typescript": "^3.8.2"
-  }
+  },
+  "moduleDirectories": [
+    "node_modules",
+    "src"
+  ]
 }

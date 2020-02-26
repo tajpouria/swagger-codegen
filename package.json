@@ -4,9 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "test": "lerna run test",
     "lint": "eslint -c .eslintrc.js packages/**/*.ts --fix --quiet"
   },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^25.1.3",
