@@ -4,8 +4,8 @@ WORKDIR /usr/swagger-codegen
 
 COPY ./package.json .
 
-RUN npm i
+RUN yarn
 
 COPY . .
 
-RUN npm lerna bootstrap
+RUN yarn lerna bootstrap
