@@ -1,6 +1,6 @@
 # Swagger Code Generator
 
-After a long time repeating our self implementing object oriented documented REST API (_aka fame [ Swagger ](https://github.com/swagger-api) docs!_) client interface; we just decided to automate this pain by witting a generator called _maybe_ swagger-codegen
+After a long time repeating our self implementing documented REST API (_aka fame [ Swagger ](https://github.com/swagger-api) docs!_) client interface; we just decided to automate this pain by witting a generator called _maybe_ swagger-codegen
 
 ## Versioning
 

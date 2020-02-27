@@ -10,9 +10,16 @@
     "lint": "eslint -c .eslintrc.js packages/**/*.ts --fix --quiet"
   },
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/swagger-codegen-cli",
+      "packages/swagger-codegen-core",
+      "packages/utils",
+      "packages/plugables/plugins/*",
+      "packages/plugables/generators/*",
+      "packages/playground"
+    ]
+  },
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^25.1.3",
