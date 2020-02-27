@@ -2,12 +2,16 @@ We just not yet exactly decided about contribution rules; however I think unders
 
 #### How this repository structured?
 
-Currently repository is made three main packages available on [packages/](https://github.com/tajpouria/swagger-codegen/tree/master/packages) folder :
+Currently repository is five made of minor packages available on [packages/](https://github.com/tajpouria/swagger-codegen/tree/master/packages) folder :
 
 1. [swagger-codegen-cli](https://github.com/tajpouria/swagger-codegen/tree/master/packages/swagger-codegen-cli) Public package contains all the logics that is related to interacting with swagger-codegen command line interface
 2. [swagger-codegen-core](https://github.com/tajpouria/swagger-codegen/tree/master/packages/swagger-codegen-core) Public package contains core concepts and client utilities behinds swagger-codegen
 
 3. [ utils ](https://github.com/tajpouria/swagger-codegen/tree/master/packages/utils) Private package; contains swagger-codegen's shared helpers and types
+
+4. [ plugables ](https://github.com/tajpouria/swagger-codegen/tree/master/packages/plugables) Public package; contains swagger-codegen 's **Plugins** and **Generators**
+
+5. [ Playground ](https://github.com/tajpouria/swagger-codegen/tree/master/packages/playground) Private package; swagger-codegen customized development environment
 
 #### How can I make project up and running?
 
@@ -31,4 +35,6 @@ There we go!
 
 We follows known [ git-flow ](https://datasift.github.io/gitflow/IntroducingGitFlow.html) principles and project setting up to running our linter rules on `git commit` level
 
-You can find our tags on [tags on this repository](https://github.com/tajpouria/swagger-codegen/tags) **make sure to create your pull request on you target tag version dev branch** for example if you want make some change on version `v0.0.1` you should make your pull request on `v0.0.1-dev` branch
+You can find our tags on [tags on this repository](https://github.com/tajpouria/swagger-codegen/tags) **make sure to create your pull request on your target tag version dev branch** for example if you want make some change on version `v0.0.1` you should make your pull request on `v0.0.1-dev` branch
+
+**Best Regards**
