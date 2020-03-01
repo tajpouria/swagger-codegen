@@ -1,5 +1,7 @@
-export class CodeGen {
-  constructor(private generatorOptions: IGeneratorOptions) {}
+import { CodeGenOptions } from '@swagger-codegen/utils/typings';
 
-  generate() {}
+export class CodeGen {
+  constructor(private codegenOptions: CodeGenOptions) {
+    console.info(codegenOptions);
+  }
 }

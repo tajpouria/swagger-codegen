@@ -4,7 +4,12 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: ['airbnb-base', 'prettier/@typescript-eslint', 'plugin:prettier/recommended'],
+  extends: [
+    'airbnb-base',
+    'prettier/@typescript-eslint',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+  ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
