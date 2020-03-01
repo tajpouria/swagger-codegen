@@ -1,5 +1,5 @@
+import { Swagger2 } from '..';
+
 export interface CodeGenOptions {
-  readonly swagger: SwaggerSchema;
-  plugins: Array<Plugin>;
-  generator: Generator;
+  readonly swagger: Swagger2;
 }

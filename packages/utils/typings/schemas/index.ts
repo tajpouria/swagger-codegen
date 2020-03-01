@@ -1,2 +1,1 @@
-export * from './generatedSchema';
-export * from './preGeneratedSchema';
+export * from './Swagger2';
