@@ -5,6 +5,8 @@
   "types": "dist/index",
   "license": "MIT",
   "scripts": {
+
+    "tsc:watch": "tsc -w",
     "build": "yarn run clean && yarn run compile",
     "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo",
     "compile": "tsc -b tsconfig.json",

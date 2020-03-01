@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start": "lerna run tsc:watch --stream --parallel",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "test": "lerna run test",
@@ -20,11 +21,11 @@
       "packages/playground"
     ]
   },
-  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^25.1.3",
     "@typescript-eslint/eslint-plugin": "^2.21.0",
     "@typescript-eslint/parser": "^2.21.0",
+    "concurrently": "^5.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.10.0",

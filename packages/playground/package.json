@@ -8,17 +8,21 @@
     "dist"
   ],
   "scripts": {
+    "tsc:watch": "tsc -w",
+    "dev": "nodemon --inspect-brk dist/index.js",
     "build": "yarn run clean && yarn run compile",
     "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo",
     "compile": "tsc -b tsconfig.json"
   },
   "dependencies": {
+    "@swagger-codegen/axios-instance-generator": "0.0.1",
     "@swagger-codegen/cli": "0.0.1",
     "@swagger-codegen/core": "0.0.1",
-    "@swagger-codegen/typescript-plugin": "0.0.1",
-    "@swagger-codegen/axios-instance-generator": "0.0.1"
+    "@swagger-codegen/typescript-plugin": "0.0.1"
   },
   "devDependencies": {
+    "@types/node": "^13.7.7",
+    "nodemon": "^2.0.2",
     "typescript": "^3.8.2"
   }
 }
