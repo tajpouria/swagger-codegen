@@ -1,3 +1,5 @@
 import { CodeGen } from '@swagger-codegen/core';
 
-console.info(CodeGen);
+import { pet } from './testSwaggerSchemas';
+
+const codegen = new CodeGen({ swaggerSchema: pet });

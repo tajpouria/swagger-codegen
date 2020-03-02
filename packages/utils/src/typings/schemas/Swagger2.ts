@@ -3,9 +3,9 @@ import { HttpMethodType } from '..';
 /**
  * Represent swagger2 schema
  *
- * { @link https://swagger.io/docs/specification/2-0/basic-structure/ }
+ * @link https://swagger.io/docs/specification/2-0/basic-structure/
  */
-export type Swagger2 = Readonly<{
+export type Swagger2Schema = Readonly<{
   // Metadata
   swagger: string;
   info: Readonly<{
@@ -30,39 +30,39 @@ export type Swagger2 = Readonly<{
   securityDefinitions: Readonly<Record<Swagger2AuthTypes, Swagger2BasicAuth | Swagger2APIKeyAuth | Swagger2OAuth2>>;
 }>;
 
-export type Swagger2String = Swagger2Type &
+export type Swagger2StringType = Swagger2Type &
   Readonly<{
     type: Swagger2RawType.string;
   }>;
 
-export type Swagger2Number = Swagger2Type &
+export type Swagger2NumberType = Swagger2Type &
   Readonly<{
     type: Swagger2RawType.number | Swagger2RawType.integer;
     minimum?: number;
     maximum?: number;
   }>;
 
-export type Swagger2Boolean = Swagger2Type &
+export type Swagger2BooleanType = Swagger2Type &
   Readonly<{
     type: Swagger2RawType.boolean;
   }>;
 
-export type SwaggerEnum = Swagger2Type &
+export type SwaggerEnumType = Swagger2Type &
   Readonly<{
     type: Swagger2RawType.enum;
     enum: ReadonlyArray<string>;
   }>;
 
-export type Swagger2Dictionary = Swagger2Type &
+export type Swagger2DictionaryType = Swagger2Type &
   Readonly<{
     additionalProperties: Swagger2Type;
   }>;
 
-export type SwaggerSchema = Swagger2Type & {
+export type SwaggerSchemaType = Swagger2Type & {
   schema: Swagger2Type;
 };
 
-export type Swagger2Array = Swagger2Type &
+export type Swagger2ArrayType = Swagger2Type &
   Readonly<{
     type: Swagger2RawType.array;
     items: Swagger2Type;
@@ -71,7 +71,7 @@ export type Swagger2Array = Swagger2Type &
     maxItems?: number;
   }>;
 
-export type SwaggerReference = Swagger2Type & {
+export type SwaggerReferenceType = Swagger2Type & {
   type: Swagger2RawType.reference;
   $ref: string;
 };
