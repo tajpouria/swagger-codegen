@@ -1,6 +1,7 @@
 import { Swagger2Schema, normalizeSwagger2ResponseDefinitions } from '@swagger-codegen/utils';
 
-import { SwaggerAnalyzer, swaggerSchemaNormalizer } from '.';
+import { SwaggerAnalyzer } from '.';
+import { swaggerSchemaNormalizer } from './commons';
 
 interface Swagger2AnalyzerConstructorProps {
   swagger2Schema: Swagger2Schema;

@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently --names 'tsc,copyfiles' -c 'bgBlue.bold,bgCyan.bold' 'lerna run tsc:watch --stream --parallel' 'lerna run copyfiles --stream --parallel'",
+    "start": "concurrently yarn:start:*",
+    "start:tsc:watch": "lerna run tsc:watch",
+    "start:copyfiles": "lerna run copyfiles",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "test": "lerna run test",

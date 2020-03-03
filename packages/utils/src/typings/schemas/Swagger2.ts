@@ -21,7 +21,7 @@ export type Swagger2Schema = Readonly<{
   consumes: ReadonlyArray<string>;
   produces: ReadonlyArray<string>;
   // Paths
-  paths: Readonly<Record<string, Path>>;
+  paths: Swagger2PathsObject;
   // Input and Output Models
   definitions: Readonly<Record<string, Swagger2Type>>;
   // Parameters
@@ -76,6 +76,15 @@ export type SwaggerReferenceType = Swagger2Type & {
   $ref: string;
 };
 
+export type Swagger2PathsObjectEntriesTuple = [string, Swagger2PathsObject];
+
+export type Swagger2PathAndMethodAndOperationAndParamaterListTuple = [
+  string,
+  HttpMethodType,
+  Swagger2PathOperation,
+  ReadonlyArray<Swagger2Parameter>,
+];
+
 type Swagger2Type = Readonly<
   Partial<{
     type: Swagger2RawType;
@@ -108,9 +117,11 @@ enum Swagger2SchemeTypes {
 }
 
 // Paths
-type Path = Readonly<Record<HttpMethodType, Swagger2PathOperation>>;
+export type Swagger2PathsObject = Readonly<Record<string, Swagger2Path>>;
 
-type Swagger2PathOperation = Readonly<{
+type Swagger2Path = Readonly<Record<HttpMethodType, Swagger2PathOperation>>;
+
+export type Swagger2PathOperation = Readonly<{
   summary: string;
   security: Readonly<Record<Swagger2AuthTypes, ReadonlyArray<string>>>;
   description: string;
