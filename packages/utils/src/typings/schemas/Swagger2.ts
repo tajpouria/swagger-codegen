@@ -76,15 +76,6 @@ export type SwaggerReferenceType = Swagger2Type & {
   $ref: string;
 };
 
-export type Swagger2PathsObjectEntriesTuple = [string, Swagger2PathsObject];
-
-export type Swagger2PathAndMethodAndOperationAndParamaterListTuple = [
-  string,
-  HttpMethodType,
-  Swagger2PathOperation,
-  ReadonlyArray<Swagger2Parameter>,
-];
-
 type Swagger2Type = Readonly<
   Partial<{
     type: Swagger2RawType;
@@ -119,7 +110,7 @@ enum Swagger2SchemeTypes {
 // Paths
 export type Swagger2PathsObject = Readonly<Record<string, Swagger2Path>>;
 
-type Swagger2Path = Readonly<Record<HttpMethodType, Swagger2PathOperation>>;
+export type Swagger2Path = Readonly<Record<HttpMethodType, Swagger2PathOperation>>;
 
 export type Swagger2PathOperation = Readonly<{
   summary: string;
@@ -138,7 +129,7 @@ export type Swagger2PathOperation = Readonly<{
 }>;
 
 // Parameters
-type Swagger2Parameter = Swagger2Type &
+export type Swagger2Parameter = Swagger2Type &
   Readonly<{
     name: string;
     in: Swagger2ParameterLocationType;
