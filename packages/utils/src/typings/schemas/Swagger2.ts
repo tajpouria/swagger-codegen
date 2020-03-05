@@ -76,7 +76,7 @@ export type SwaggerReferenceType = Swagger2Type & {
   $ref: string;
 };
 
-type Swagger2Type = Readonly<
+export type Swagger2Type = Readonly<
   Partial<{
     type: Swagger2RawType;
     required: boolean;
@@ -87,7 +87,7 @@ type Swagger2Type = Readonly<
   }>
 >;
 
-enum Swagger2RawType {
+export enum Swagger2RawType {
   object = 'object',
   string = 'string',
   boolean = 'boolean',
@@ -100,7 +100,7 @@ enum Swagger2RawType {
 }
 
 // Base URL
-enum Swagger2SchemeTypes {
+export enum Swagger2SchemeTypes {
   http = 'http',
   https = 'https',
   ws = 'ws',
@@ -111,6 +111,8 @@ enum Swagger2SchemeTypes {
 export type Swagger2PathsObject = Readonly<Record<string, Swagger2Path>>;
 
 export type Swagger2Path = Readonly<Record<HttpMethodType, Swagger2PathOperation>>;
+
+export type Swagger2PathEnum = [HttpMethodType, Swagger2PathOperation];
 
 export type Swagger2PathOperation = Readonly<{
   summary: string;
@@ -140,7 +142,7 @@ export type Swagger2Parameter = Swagger2Type &
     format: string;
   }>;
 
-enum Swagger2ParameterLocationType {
+export enum Swagger2ParameterLocationType {
   query = 'query',
   path = 'path',
   header = 'header',
@@ -148,7 +150,7 @@ enum Swagger2ParameterLocationType {
   formData = 'formData',
 }
 
-enum Swagger2CollectionFormat {
+export enum Swagger2CollectionFormat {
   csv = 'csv', // Comma-separated values.
   ssv = 'ssv', // Space-separated values.
   tsv = 'tsv', // Tab-separated values.
@@ -157,23 +159,23 @@ enum Swagger2CollectionFormat {
 }
 
 // Authentication
-enum Swagger2AuthTypes {
+export enum Swagger2AuthTypes {
   basic = 'basic',
   apiKey = 'apiKey',
   oauth2 = 'oauth2',
 }
 
-interface Swagger2BasicAuth {
+export interface Swagger2BasicAuth {
   type: Swagger2AuthTypes.basic;
 }
 
-interface Swagger2APIKeyAuth {
+export interface Swagger2APIKeyAuth {
   type: Swagger2AuthTypes.apiKey;
   in: string;
   name: string;
 }
 
-interface Swagger2OAuth2 {
+export interface Swagger2OAuth2 {
   type: Swagger2AuthTypes.oauth2;
   flow: string;
   authorizationUrl: string;
