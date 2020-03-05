@@ -26,6 +26,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-underscore-dangle': 'off',
     'import/extensions': 'off',
+    'no-useless-constructor': 'off',
     'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
   },
   ignorePatterns: ['node_modules/', 'dist/'],
