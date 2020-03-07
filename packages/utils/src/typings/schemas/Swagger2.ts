@@ -1,5 +1,7 @@
 import { HttpMethodType } from '..';
 
+// TODO: Remove unnecessary Readonly types
+
 /**
  * Represent swagger2 schema
  *
@@ -23,11 +25,11 @@ export type Swagger2Schema = Readonly<{
   // Paths
   paths: Swagger2PathsObject;
   // Input and Output Models
-  definitions: Readonly<Record<string, Swagger2Type>>;
+  definitions: Record<string, Swagger2Type>;
   // Parameters
-  parameters: Readonly<Record<string, Swagger2Parameter>>;
+  parameters: Record<string, Swagger2Parameter>;
   // Authentication
-  securityDefinitions: Readonly<Record<Swagger2AuthTypes, Swagger2BasicAuth | Swagger2APIKeyAuth | Swagger2OAuth2>>;
+  securityDefinitions: Record<Swagger2AuthTypes, Swagger2BasicAuth | Swagger2APIKeyAuth | Swagger2OAuth2>;
 }>;
 
 export type Swagger2StringType = Swagger2Type &
@@ -76,16 +78,15 @@ export type SwaggerReferenceType = Swagger2Type & {
   $ref: string;
 };
 
-export type Swagger2Type = Readonly<
-  Partial<{
-    type: Swagger2RawType;
-    required: boolean;
-    description: string;
-    $ref: string;
-    properties: Record<string, Swagger2RawType>;
-    additionalProperties?: boolean | Swagger2Type;
-  }>
->;
+export type Swagger2Type = Partial<{
+  type: Swagger2RawType;
+  required: boolean;
+  description: string;
+  $ref: string;
+  properties: Record<string, Swagger2RawType>;
+  additionalProperties: boolean | Swagger2Type;
+  schema: Swagger2Type;
+}>;
 
 export enum Swagger2RawType {
   object = 'object',
@@ -118,6 +119,7 @@ export type Swagger2PathOperation = Readonly<{
   summary: string;
   security: Readonly<Record<Swagger2AuthTypes, ReadonlyArray<string>>>;
   description: string;
+  operationId: string;
   tags: ReadonlyArray<string>;
   produces: ReadonlyArray<string>;
   consumes: ReadonlyArray<string>;
