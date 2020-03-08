@@ -5,10 +5,13 @@
   "license": "MIT",
   "scripts": {
     "start": "concurrently yarn:start:*",
-    "start:tsc:watch": "lerna run tsc:watch",
-    "start:copyfiles": "lerna run copyfiles",
-    "bootstrap": "lerna bootstrap",
+    "start:build": "lerna run start:build --parallel",
+    "start:copyfiles": "lerna run start:copyfiles",
+    "bootstrap": "concurrently yarn:bootstrap:*",
+    "bootstrap:install-dependencies": "lerna bootstrap",
+    "bootstrap:build-ts": "lerna run build",
     "build": "lerna run build",
+    "clean": "lerna run clean",
     "test": "lerna run test",
     "lint": "eslint -c .eslintrc.js packages/**/*.ts --fix --quiet"
   },

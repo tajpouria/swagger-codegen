@@ -78,16 +78,16 @@ export function normalizeSwagger2ResponseDefinitions(swagger2Schema: Swagger2Sch
   });
 
   // TODO: Should I ignore following action?
-  currentSchemaHttpMethodIdentifierList.forEach(({ operation: { responses } }) => {
-    Object.keys(responses).forEach(res => {
-      const ref = responses[res].$ref;
+  // currentSchemaHttpMethodIdentifierList.forEach(({ operation: { responses } }) => {
+  //   Object.keys(responses).forEach(res => {
+  //     const ref = responses[res].$ref;
 
-      if (ref) {
-        // const definition = get(swagger2SchemaTemp, ref.substring(2).split('/')); // remove leading "#/"
-        // responses[res] = definition;
-      }
-    });
-  });
+  //     if (ref) {
+  //       // const definition = get(swagger2SchemaTemp, ref.substring(2).split('/')); // remove leading "#/"
+  //       // responses[res] = definition;
+  //     }
+  //   });
+  // });
 
   return swagger2SchemaTemp;
 }

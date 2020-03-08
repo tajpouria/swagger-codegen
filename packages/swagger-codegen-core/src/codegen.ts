@@ -18,6 +18,7 @@ export class CodeGen {
     const { codegenOptions, analyzer } = this;
 
     const abstractSwaggerTree = analyzer.createAbstractSwaggerTree();
+
     return JSON.stringify(codegenOptions);
   }
 }
