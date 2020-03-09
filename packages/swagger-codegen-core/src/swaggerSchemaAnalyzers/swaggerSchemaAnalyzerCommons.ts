@@ -1,3 +1,7 @@
+export interface SwaggerSchemaAnalyzer {
+  createAbstractSwaggerSchemaTree(): any;
+}
+
 /**
  * Running a sets of actions on swagger schema in order to turn it into target shape
  * @param swagger2Schema Generated schema by swagger v2

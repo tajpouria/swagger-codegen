@@ -1,0 +1,22 @@
+export type Swagger2AbstractSchemaTreeMethod = Readonly<{
+  methodName: string;
+  intVersion: number;
+  isLatestVersion: boolean;
+  isSecure: boolean;
+  isSecureToken: boolean;
+  isSecureApiKey: boolean;
+  isSecureBasic: boolean;
+  path: string;
+  pathFormatString: string;
+  className: string;
+  version: string;
+  method: string;
+  isGET: boolean;
+  isPOST: boolean;
+  isDeprecated: boolean;
+  summary: string;
+  externalDocs: string;
+  parameters: TypeSpecParameter[];
+  headers: Header[];
+  responseTypes: string;
+}>;

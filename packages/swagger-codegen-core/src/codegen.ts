@@ -1,11 +1,11 @@
 import { CodeGenOptions } from '@swagger-codegen/utils';
 
-import { SwaggerAnalyzer, Swagger2Analyzer } from './swaggerAnalyzers';
+import { SwaggerSchemaAnalyzer, Swagger2Analyzer } from './swaggerSchemaAnalyzers';
 
 export class CodeGen {
   private codegenOptions: CodeGenOptions;
 
-  private analyzer: SwaggerAnalyzer;
+  private analyzer: SwaggerSchemaAnalyzer;
 
   constructor(codegenOptions: CodeGenOptions) {
     this.codegenOptions = codegenOptions;
@@ -17,7 +17,7 @@ export class CodeGen {
   public generate(): string {
     const { codegenOptions, analyzer } = this;
 
-    const abstractSwaggerTree = analyzer.createAbstractSwaggerTree();
+    const abstractSwaggerSchemaTree = analyzer.createAbstractSwaggerSchemaTree();
 
     return JSON.stringify(codegenOptions);
   }
