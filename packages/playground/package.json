@@ -8,9 +8,8 @@
     "dist"
   ],
   "scripts": {
-    "tsc:watch": "tsc -w",
-    "dev": "nodemon --inspect-brk dist/index.js",
-    "copyfiles": "copyfiles --up 1 src/**/*.json dist/",
+    "start:build": "tsc -w",
+    "start:copyfiles": "copyfiles --up 1 src/**/*.json dist/",
     "build": "yarn run clean && yarn run compile",
     "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo",
     "compile": "tsc -b tsconfig.json"

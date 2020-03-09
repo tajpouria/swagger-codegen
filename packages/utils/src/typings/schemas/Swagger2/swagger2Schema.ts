@@ -1,4 +1,4 @@
-import { HttpMethodType } from '..';
+import { HttpMethodType } from '../..';
 
 // TODO: Remove unnecessary Readonly types
 
